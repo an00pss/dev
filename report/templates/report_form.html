@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="font-family:sans-serif">
+            <form method="post" class="main" style="padding: 20px;" enctype="multipart/form-data">
+                {% csrf_token %}
+            <div class="first-sec" style="display: flex;width: 100%;">
+                <div style="width: 50%;display: flex;flex-direction: column;">
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="clinic_name" style="width: 35%;text-align: right;">
+                            <p>Clinic Name</p>
+                        </label>
+                        <div style="width: 65%;"><input type="text" name="clinic_name" id="clinic_name" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="physician" style="width: 35%;text-align: right;">
+                            <p>Physician Name</p>
+                        </label>
+                        <div style="width: 65%;"><input type="text" name="physician" id="physician" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="first_name" style="width: 35%;text-align: right;">
+                            <p>Patient First Name</p>
+                        </label>
+                        <div style="width: 65%;"><input type="text" name="first_name" id="first_name" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="dob" style="width: 35%;text-align: right;">
+                            <p>Patient Dob</p>
+                        </label>
+                        <div style="width: 65%;"><input type="date" name="dob" id="dob" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                </div>
+
+                <div style="width: 50%;display: flex;flex-direction: column;">
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="clinic_logo" style="width: 35%;text-align: right;">
+                            <p>Clinic Logo</p>
+                        </label>
+                        <div style="width: 65%;"><input type="file" accept="image/*" name="clinic_logo" id="clinic_logo" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="physician_contact" style="width: 35%;text-align: right;">
+                            <p>Physician Contact</p>
+                        </label>
+                        <div style="width: 65%;"><input type="text" name="physician_contact" id="physician_contact" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="last_name" style="width: 35%;text-align: right;">
+                            <p>Patient Last Name</p>
+                        </label>
+                        <div style="width: 65%;"><input type="text" name="last_name" id="last_name" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                    <div style="display: flex;align-items: center;gap:8px;">
+                        <label for="contact" style="width: 35%;text-align: right;">
+                            <p>Patient Contact</p>
+                        </label>
+                        <div style="width: 65%;"><input type="text" name="contact" id="contact" required style="padding: 10px;outline: none;border: 1px solid; border-radius: 4px;width:84%;" placeholder="Placeholder"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-sec" style="padding:20px;">
+                <div>
+                    <div style="display: flex;align-items: center; justify-content: space-between;">
+                        <label for="chief_complaint">Chief Complaint</label>
+                        <p>Max 5000 characters allowed</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div style="display: flex;justify-content: center;">
+                        <textarea maxlength="5000" required name="chief_complaint" id="chief_complaint" style="width: 100%; height: 41vh; padding: 10px; box-sizing: border-box; resize: none; overflow-y: auto; border: 1px solid #ccc; outline: none;" placeholder="Type here..."></textarea>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex;align-items: center; justify-content: space-between;">
+                        <label for="consultation_note">Consultation Note</label>
+                        <p>Max 5000 characters allowed</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div style="display: flex;justify-content: center;">
+                        <textarea maxlength="5000" required name="consultation_note" id="consultation_note" style="width: 100%; height: 41vh; padding: 10px; box-sizing: border-box; resize: none; overflow-y: auto; border: 1px solid #ccc; outline: none;" placeholder="Type here..."></textarea>
+                    </div>
+                </div>
+                <div style="padding: 20px; display: flex;justify-content: center;">
+                    <button type="submit" style="border: none; color: white; background-color: #2a2adb;padding: 10px;border-radius: 5px;width: 146px;font-size: 14px;">Generate Report</button>
+                </div>
+            </div>
+        </form>
+    </body>
+
+
+</html>
