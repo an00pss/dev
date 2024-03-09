@@ -1,6 +1,5 @@
 arabic-reshaper==3.0.0
 asgiref==3.4.1
-dataclasses==0.8
 Django==3.2.25
 html5lib==1.1
 Pillow==8.4.0
